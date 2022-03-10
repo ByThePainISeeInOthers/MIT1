@@ -3,19 +3,19 @@
 
 using namespace std;
 int fib(int n) {
-    if (n == 1) {
-        return 0;
+    int a = 0, b = 1;
+    cout << a << endl << b << endl;
+    for (int i = 2; i < n; ++i) {
+    b += a;
+    a = b - a;
+    cout << b << endl;
     }
-    if (n == 2) {
-        return 1;
-    }
-    return fib(n - 1) + fib(n - 2);
 }
 
 int main() {
     int n;
     cin >> n;
-    cout << fib(n) << endl;
+    fib(n);
     getch();
     return 0;
 }
